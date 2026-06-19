@@ -282,32 +282,32 @@
   animation: pulse-ring 2.2s ease-out infinite;
 }
 
-/* Scroll reveal */
-@utility reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-@utility reveal-left {
-  opacity: 0;
-  transform: translateX(-32px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-@utility reveal-right {
-  opacity: 0;
-  transform: translateX(32px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-@utility is-visible {
-  opacity: 1;
-  transform: none;
+/* Scroll reveal — plain CSS so the compound `.is-visible` selector reliably wins */
+@layer components {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 0;
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal {
+    transform: translateY(28px);
+  }
+  .reveal-left {
+    transform: translateX(-32px);
+  }
+  .reveal-right {
+    transform: translateX(32px);
+  }
+  .reveal.is-visible,
+  .reveal-left.is-visible,
+  .reveal-right.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes scale-in {
