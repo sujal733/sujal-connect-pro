@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import {
   CheckCircle2,
   Loader2,
@@ -37,7 +37,7 @@ const TYPES: { id: EnquiryType; icon: typeof Store; title: string; sub: string }
   { id: "bulk", icon: Boxes, title: "Bulk / Wholesale Enquiry", sub: "High volume / reseller" },
 ];
 
-const honeypotStyle: React.CSSProperties = {
+const honeypotStyle: CSSProperties = {
   position: "absolute",
   left: "-9999px",
   top: "auto",

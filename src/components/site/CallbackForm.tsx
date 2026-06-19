@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import { PhoneCall, CheckCircle2, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,7 @@ import {
   type EnquiryInput,
 } from "@/lib/enquiry";
 
-const honeypotStyle: React.CSSProperties = {
+const honeypotStyle: CSSProperties = {
   position: "absolute",
   left: "-9999px",
   top: "auto",
