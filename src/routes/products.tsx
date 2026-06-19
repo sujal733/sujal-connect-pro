@@ -72,6 +72,15 @@ function Products() {
         </div>
       </section>
 
+      {/* Catalog download */}
+      <CatalogDownload className="pb-4" />
+
+      {/* Bearing number finder */}
+      <BearingFinder />
+
+      {/* Brands */}
+      <BrandsCarousel />
+
       <SectionHeading
         className="px-4 pb-12"
         eyebrow="Can't find it?"
