@@ -61,6 +61,9 @@ function About() {
                 From a single ball bearing to bulk orders and hard-to-find custom parts, our focus
                 has never changed — the right part, genuine quality, and service you can count on.
               </p>
+              <div className="mt-6">
+                <TrustBadge tone="dark" />
+              </div>
             </Reveal>
           </div>
           <Reveal variant="right" className="hidden lg:block">
