@@ -164,10 +164,24 @@ function Contact() {
                   allowFullScreen
                 />
               </div>
+              <Button asChild variant="hero" size="lg" className="mt-4 w-full">
+                <a href={directionsLink} target="_blank" rel="noopener noreferrer">
+                  <Navigation /> Get Directions
+                </a>
+              </Button>
+            </Reveal>
+
+            <Reveal variant="right" delay={180}>
+              <div className="mt-5">
+                <TrustBadge className="w-full justify-center" />
+              </div>
             </Reveal>
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FaqSection />
     </>
   );
 }
