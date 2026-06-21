@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Info } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
