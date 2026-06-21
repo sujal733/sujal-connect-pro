@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Info } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
@@ -47,17 +46,6 @@ function Products() {
             </p>
           </Reveal>
         </div>
-      </section>
-
-      {/* No-price notice */}
-      <section className="px-4 pt-12 sm:px-6">
-        <Reveal className="mx-auto flex max-w-3xl items-start gap-3 rounded-xl border border-accent/30 bg-accent/10 p-4 text-sm text-foreground">
-          <Info className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-          <p>
-            <strong>Prices aren't listed online.</strong> Bearing rates change daily, so every order
-            is quoted personally. Tap a product to get a fast, current price on WhatsApp.
-          </p>
-        </Reveal>
       </section>
 
       <section className="px-4 py-14 sm:px-6 lg:py-16">
